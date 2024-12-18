@@ -58,21 +58,28 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun addUiModule() {
+        val itemDetailsCheckBox = findViewById<CheckBox>(R.id.show_item_detail)
+        val descriptionCheckBox = findViewById<CheckBox>(R.id.show_description)
         val modulesRecyclerView = findViewById<RecyclerView>(R.id.modules_recycler_view)
         modulesRecyclerView.layoutManager = LinearLayoutManager(this)
-        val modulesAdapter = ModulesAdapter()
+        val modulesAdapter =
+            ModulesAdapter(itemDetailsCheckBox.isChecked, descriptionCheckBox.isChecked)
         modulesRecyclerView.adapter = modulesAdapter
-
-        findViewById<CheckBox>(R.id.show_recycler_view_details).setOnCheckedChangeListener { _, isChecked: Boolean ->
-            modulesAdapter.update(isChecked)
+        itemDetailsCheckBox.setOnCheckedChangeListener { _, isChecked: Boolean ->
+            modulesAdapter.showItemDetails = isChecked
+            modulesAdapter.notifyDataSetChanged()
+        }
+        descriptionCheckBox.setOnCheckedChangeListener { _, isChecked: Boolean ->
+            modulesAdapter.showItemDescription = isChecked
+            modulesAdapter.notifyDataSetChanged()
         }
     }
 
     data class UiModuleInfo(val name: String, val kotlinClass: KClass<*>)
 
-    class ModulesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    class ModulesAdapter(var showItemDetails: Boolean, var showItemDescription: Boolean) :
+        RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-        private var isShowDetails: Boolean = false
         private val modules = listOf(
             UiModuleInfo(":basicviews", BasicViewsMainActivity::class),
             UiModuleInfo(":bottomnavigationviews", BottomNavigationMainActivity::class),
@@ -122,11 +129,12 @@ class MainActivity : AppCompatActivity() {
             }
             holder.itemView.findViewById<TextView>(R.id.item_description).let {
                 it.text = modules[position].kotlinClass.qualifiedName
+                it.visibility = if (showItemDescription) View.VISIBLE else View.GONE
             }
             holder.itemView.findViewById<TextView>(R.id.item_view_info).let {
                 it.text =
                     "[position = $position], [bindViewHolderCount = $bindViewHolderCount], [tag = ${tags["${holder.hashCode()}"]}], [$holder], [createViewHolderCount = $createViewHolderCount]."
-                it.visibility = if (isShowDetails) View.VISIBLE else View.GONE
+                it.visibility = if (showItemDetails) View.VISIBLE else View.GONE
             }
 
             holder.itemView.setOnClickListener {
@@ -148,12 +156,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
-        fun update(isShowDetails: Boolean) {
-            this.isShowDetails = isShowDetails
-            notifyDataSetChanged()
-        }
-
 
     }
 

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="show_details">Show recycler view details</string>
+    <string name="show_details">Item view info</string>
+    <string name="show_description">Item description</string>
 </resources>
