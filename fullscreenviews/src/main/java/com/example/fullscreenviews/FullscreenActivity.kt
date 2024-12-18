@@ -17,7 +17,7 @@ import com.example.fullscreenviews.databinding.ActivityFullscreenBinding
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class FullscreenMainActivity : AppCompatActivity() {
+class FullscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFullscreenBinding
     private lateinit var fullscreenContent: TextView

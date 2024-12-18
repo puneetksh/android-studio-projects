@@ -9,14 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/FragmentViewModelTheme">
         <activity
-            android:name=".FragmentViewModelMainActivity"
+            android:name=".FragmentViewModelActivity"
             android:exported="true"
             android:theme="@style/FragmentViewModelTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

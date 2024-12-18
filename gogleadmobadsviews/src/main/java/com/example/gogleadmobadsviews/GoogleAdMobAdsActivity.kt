@@ -24,13 +24,13 @@ private const val TOAST_TEXT = "Test ads are being shown. " +
         "with your own ad unit ID."
 private const val START_LEVEL = 1
 
-class GoogleAdMobAdsMainActivity : AppCompatActivity() {
+class GoogleAdMobAdsActivity : AppCompatActivity() {
 
     private var currentLevel: Int = 0
     private var interstitialAd: InterstitialAd? = null
     private lateinit var nextLevelButton: Button
     private lateinit var levelTextView: TextView
-    private val TAG = "GoogleAdMobAdsMainActivity"
+    private val TAG = "GoogleAdMobAdsActivity"
     private lateinit var binding: ActivityMainGoogleAdmobAdsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,7 +80,7 @@ class GoogleAdMobAdsMainActivity : AppCompatActivity() {
                     interstitialAd = ad
                     nextLevelButton.setEnabled(true)
                     Toast.makeText(
-                        this@GoogleAdMobAdsMainActivity,
+                        this@GoogleAdMobAdsActivity,
                         "onAdLoaded()",
                         Toast.LENGTH_SHORT
                     )
@@ -122,7 +122,7 @@ class GoogleAdMobAdsMainActivity : AppCompatActivity() {
                         loadAdError.message
                     )
                     Toast.makeText(
-                        this@GoogleAdMobAdsMainActivity,
+                        this@GoogleAdMobAdsActivity,
                         "onAdFailedToLoad() with error: $error", Toast.LENGTH_SHORT
                     )
                         .show()

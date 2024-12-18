@@ -19,7 +19,7 @@ import java.util.UUID
  * If you are testing out the new Wallet functionality, you will need to create a
  * [Temporary Issuer Account](https://wallet-lab-tools.web.app/issuers) prior to running
  * this example. If you are using the temporary issuer account, you must enter the TODO fields
- * in the [WalletActivity.onAddToWalletClicked] function.
+ * in the [GoogleWalletActivity.onAddToWalletClicked] function.
  *
  * If you are using this template to create a custom pass, you will need to sign into the Google Pay
  * Business Console, Create a New Pass, and Alter the JSON in the validator to ensure the pass looks
@@ -30,7 +30,7 @@ import java.util.UUID
  * @see PayClient.savePasses
  * @see SamplePass
  */
-class WalletActivity : AppCompatActivity() {
+class GoogleWalletActivity : AppCompatActivity() {
 
     companion object {
         /**

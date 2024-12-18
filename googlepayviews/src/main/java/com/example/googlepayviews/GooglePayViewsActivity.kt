@@ -18,7 +18,7 @@ import org.json.JSONObject
 /**
  * Checkout implementation for the app
  */
-class CheckoutActivity : AppCompatActivity() {
+class GooglePayViewsActivity : AppCompatActivity() {
 
     // Arbitrarily-picked constant integer you define to track a request for payment data activity.
     private val loadPaymentDataRequestCode = 991

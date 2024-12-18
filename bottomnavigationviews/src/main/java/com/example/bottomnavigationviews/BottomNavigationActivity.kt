@@ -9,7 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.bottomnavigationviews.databinding.ActivityBottomNavigationViewsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class BottomNavigationMainActivity : AppCompatActivity() {
+class BottomNavigationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBottomNavigationViewsBinding
 

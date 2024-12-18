@@ -13,7 +13,7 @@ import com.example.navigationdrawerviews.databinding.ActivityMainNavigationDrawe
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
-class NavigationDrawerMainActivity : AppCompatActivity() {
+class NavigationDrawerActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainNavigationDrawerBinding

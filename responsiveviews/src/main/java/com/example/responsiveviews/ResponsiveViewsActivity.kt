@@ -14,7 +14,7 @@ import com.example.responsiveviews.databinding.ActivityMainResponsiveViewsBindin
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
-class ResponsiveViewsMainActivity : AppCompatActivity() {
+class ResponsiveViewsActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainResponsiveViewsBinding

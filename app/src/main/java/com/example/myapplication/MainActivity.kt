@@ -16,20 +16,20 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.basicviews.BasicViewsMainActivity
-import com.example.bottomnavigationviews.BottomNavigationMainActivity
-import com.example.empty.EmptyMainActivity
-import com.example.emptyviews.EmptyViewsMainActivity
-import com.example.fragmentviewmodel.FragmentViewModelMainActivity
-import com.example.fullscreenviews.FullscreenMainActivity
-import com.example.gogleadmobadsviews.GoogleAdMobAdsMainActivity
-import com.example.googlemapsviews.GoogleMapsMainActivity
-import com.example.googlepayviews.CheckoutActivity
-import com.example.googlewallet.WalletActivity
+import com.example.basicviews.BasicViewsActivity
+import com.example.bottomnavigationviews.BottomNavigationActivity
+import com.example.empty.EmptyActivity
+import com.example.emptyviews.EmptyViewsActivity
+import com.example.fragmentviewmodel.FragmentViewModelActivity
+import com.example.fullscreenviews.FullscreenActivity
+import com.example.gogleadmobadsviews.GoogleAdMobAdsActivity
+import com.example.googlemapsviews.GoogleMapsActivity
+import com.example.googlepayviews.GooglePayViewsActivity
+import com.example.googlewallet.GoogleWalletActivity
 import com.example.loginviews.ui.login.LoginActivity
-import com.example.navigationdrawerviews.NavigationDrawerMainActivity
+import com.example.navigationdrawerviews.NavigationDrawerActivity
 import com.example.primarydetailsviews.ItemDetailHostActivity
-import com.example.responsiveviews.ResponsiveViewsMainActivity
+import com.example.responsiveviews.ResponsiveViewsActivity
 import com.example.scrollingviews.ScrollingActivity
 import com.example.settingsviews.SettingsActivity
 import com.example.settingsviews2.Settings2Activity
@@ -81,20 +81,20 @@ class MainActivity : AppCompatActivity() {
         RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         private val modules = listOf(
-            UiModuleInfo(":basicviews", BasicViewsMainActivity::class),
-            UiModuleInfo(":bottomnavigationviews", BottomNavigationMainActivity::class),
-            UiModuleInfo(":empty", EmptyMainActivity::class),
-            UiModuleInfo(":emptyviews", EmptyViewsMainActivity::class),
-            UiModuleInfo(":fragmentviewmodel", FragmentViewModelMainActivity::class),
-            UiModuleInfo(":fullscreenviews", FullscreenMainActivity::class),
-            UiModuleInfo(":gogleadmobadsviews", GoogleAdMobAdsMainActivity::class),
-            UiModuleInfo(":googlemapsviews", GoogleMapsMainActivity::class),
-            UiModuleInfo(":googlepayviews", CheckoutActivity::class),
-            UiModuleInfo(":googlewallet", WalletActivity::class),
+            UiModuleInfo(":basicviews", BasicViewsActivity::class),
+            UiModuleInfo(":bottomnavigationviews", BottomNavigationActivity::class),
+            UiModuleInfo(":empty", EmptyActivity::class),
+            UiModuleInfo(":emptyviews", EmptyViewsActivity::class),
+            UiModuleInfo(":fragmentviewmodel", FragmentViewModelActivity::class),
+            UiModuleInfo(":fullscreenviews", FullscreenActivity::class),
+            UiModuleInfo(":gogleadmobadsviews", GoogleAdMobAdsActivity::class),
+            UiModuleInfo(":googlemapsviews", GoogleMapsActivity::class),
+            UiModuleInfo(":googlepayviews", GooglePayViewsActivity::class),
+            UiModuleInfo(":googlewallet", GoogleWalletActivity::class),
             UiModuleInfo(":loginviews", LoginActivity::class),
-            UiModuleInfo(":navigationdrawerviews", NavigationDrawerMainActivity::class),
+            UiModuleInfo(":navigationdrawerviews", NavigationDrawerActivity::class),
             UiModuleInfo(":primarydetailsviews", ItemDetailHostActivity::class),
-            UiModuleInfo(":responsiveviews", ResponsiveViewsMainActivity::class),
+            UiModuleInfo(":responsiveviews", ResponsiveViewsActivity::class),
             UiModuleInfo(":scrollingviews", ScrollingActivity::class),
             UiModuleInfo(":settingsviews", SettingsActivity::class),
             UiModuleInfo(":settingsviews2", Settings2Activity::class),
